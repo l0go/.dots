@@ -15,7 +15,17 @@ require("lazy").setup({
 	-- Language Support
 	"kLabz/haxe.vim",
 	-- LSP
-	{"neoclide/coc.nvim", branch = 'release'},
+	{
+		'saghen/blink.cmp',
+		version = '1.*',
+		opts = {
+			completion = {
+				documentation = { auto_show = true },
+				trigger = { show_on_trigger_character = true },
+			},
+		},
+		opts_extend = { "sources.default" }
+	},
 	-- Color Schemes
 	"blazkowolf/gruber-darker.nvim",
 })
